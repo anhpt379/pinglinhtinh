@@ -1,0 +1,356 @@
+2011-11-04 11:49:11,465 CRIT Supervisor running as root (no user in config file)
+2011-11-04 11:49:11,506 INFO RPC interface 'supervisor' initialized
+2011-11-04 11:49:11,507 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2011-11-04 11:49:11,508 INFO daemonizing the supervisord process
+2011-11-04 11:49:11,508 INFO supervisord started with pid 26752
+2011-11-04 11:49:12,510 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:12,510 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:12,510 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:12,511 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:12,511 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:12,511 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:13,513 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:13,513 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:13,513 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:13,513 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:13,513 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:13,514 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:16,199 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:16,199 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:16,200 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:16,200 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:16,200 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:16,200 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:19,205 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:19,205 INFO gave up: web entered FATAL state, too many start retries too quickly
+2011-11-04 11:49:19,205 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:19,206 INFO gave up: jobmaster entered FATAL state, too many start retries too quickly
+2011-11-04 11:49:19,206 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:19,206 INFO gave up: 1 entered FATAL state, too many start retries too quickly
+2011-11-04 11:49:19,207 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:19,207 INFO gave up: 0 entered FATAL state, too many start retries too quickly
+2011-11-04 11:49:19,207 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:19,207 INFO gave up: 3 entered FATAL state, too many start retries too quickly
+2011-11-04 11:49:19,208 INFO spawnerr: can't find command 'python26'
+2011-11-04 11:49:19,208 INFO gave up: 2 entered FATAL state, too many start retries too quickly
+2011-11-04 11:49:38,238 INFO spawned: 'jobmaster' with pid 26766
+2011-11-04 11:49:38,253 INFO exited: jobmaster (exit status 127; not expected)
+2011-11-04 11:49:38,260 INFO spawned: 'web' with pid 26767
+2011-11-04 11:49:38,269 INFO exited: web (exit status 127; not expected)
+2011-11-04 11:49:38,273 INFO spawned: '1' with pid 26768
+2011-11-04 11:49:38,275 INFO spawned: '0' with pid 26769
+2011-11-04 11:49:38,286 INFO spawned: '3' with pid 26770
+2011-11-04 11:49:38,288 INFO spawned: '2' with pid 26771
+2011-11-04 11:49:38,289 INFO exited: 1 (exit status 127; not expected)
+2011-11-04 11:49:38,294 INFO exited: 0 (exit status 127; not expected)
+2011-11-04 11:49:38,308 INFO exited: 3 (exit status 127; not expected)
+2011-11-04 11:49:38,309 INFO exited: 2 (exit status 127; not expected)
+2011-11-04 11:49:39,313 INFO spawned: 'web' with pid 26773
+2011-11-04 11:49:39,318 INFO spawned: 'jobmaster' with pid 26774
+2011-11-04 11:49:39,323 INFO spawned: '1' with pid 26775
+2011-11-04 11:49:39,327 INFO spawned: '0' with pid 26776
+2011-11-04 11:49:39,329 INFO spawned: '3' with pid 26777
+2011-11-04 11:49:39,332 INFO spawned: '2' with pid 26778
+2011-11-04 11:49:39,339 INFO exited: web (exit status 127; not expected)
+2011-11-04 11:49:39,339 INFO exited: jobmaster (exit status 127; not expected)
+2011-11-04 11:49:39,339 INFO exited: 1 (exit status 127; not expected)
+2011-11-04 11:49:39,343 INFO exited: 0 (exit status 127; not expected)
+2011-11-04 11:49:39,343 INFO exited: 3 (exit status 127; not expected)
+2011-11-04 11:49:39,346 INFO exited: 2 (exit status 127; not expected)
+2011-11-04 11:49:41,998 INFO spawned: 'web' with pid 26779
+2011-11-04 11:49:42,000 INFO spawned: 'jobmaster' with pid 26780
+2011-11-04 11:49:42,003 INFO spawned: '1' with pid 26781
+2011-11-04 11:49:42,006 INFO spawned: '0' with pid 26782
+2011-11-04 11:49:42,008 INFO spawned: '3' with pid 26783
+2011-11-04 11:49:42,010 INFO spawned: '2' with pid 26784
+2011-11-04 11:49:42,011 INFO exited: web (exit status 127; not expected)
+2011-11-04 11:49:42,012 INFO exited: 1 (exit status 127; not expected)
+2011-11-04 11:49:42,021 INFO exited: jobmaster (exit status 127; not expected)
+2011-11-04 11:49:42,021 INFO exited: 0 (exit status 127; not expected)
+2011-11-04 11:49:42,022 INFO exited: 3 (exit status 127; not expected)
+2011-11-04 11:49:42,023 INFO exited: 2 (exit status 127; not expected)
+2011-11-04 11:49:45,612 INFO spawned: 'web' with pid 26787
+2011-11-04 11:49:45,616 INFO spawned: 'jobmaster' with pid 26788
+2011-11-04 11:49:45,618 INFO spawned: '1' with pid 26789
+2011-11-04 11:49:45,620 INFO spawned: '0' with pid 26790
+2011-11-04 11:49:45,623 INFO spawned: '3' with pid 26791
+2011-11-04 11:49:45,626 INFO spawned: '2' with pid 26792
+2011-11-04 11:49:45,627 INFO exited: web (exit status 127; not expected)
+2011-11-04 11:49:45,649 INFO gave up: web entered FATAL state, too many start retries too quickly
+2011-11-04 11:49:45,649 INFO exited: jobmaster (exit status 127; not expected)
+2011-11-04 11:49:45,649 INFO exited: 1 (exit status 127; not expected)
+2011-11-04 11:49:45,649 INFO exited: 0 (exit status 127; not expected)
+2011-11-04 11:49:45,649 INFO exited: 3 (exit status 127; not expected)
+2011-11-04 11:49:45,649 INFO exited: 2 (exit status 127; not expected)
+2011-11-04 11:49:45,650 INFO gave up: jobmaster entered FATAL state, too many start retries too quickly
+2011-11-04 11:49:45,650 INFO gave up: 1 entered FATAL state, too many start retries too quickly
+2011-11-04 11:49:45,650 INFO gave up: 0 entered FATAL state, too many start retries too quickly
+2011-11-04 11:49:45,650 INFO gave up: 3 entered FATAL state, too many start retries too quickly
+2011-11-04 11:49:45,650 INFO gave up: 2 entered FATAL state, too many start retries too quickly
+2011-11-04 11:50:05,458 CRIT Supervisor running as root (no user in config file)
+2011-11-04 11:50:05,492 INFO RPC interface 'supervisor' initialized
+2011-11-04 11:50:05,492 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2011-11-04 11:50:05,494 INFO daemonizing the supervisord process
+2011-11-04 11:50:05,495 INFO supervisord started with pid 26799
+2011-11-04 11:50:06,498 INFO spawned: 'web' with pid 26800
+2011-11-04 11:50:06,500 INFO spawned: 'jobmaster' with pid 26801
+2011-11-04 11:50:06,502 INFO spawned: '1' with pid 26802
+2011-11-04 11:50:06,510 INFO spawned: '0' with pid 26803
+2011-11-04 11:50:06,512 INFO spawned: '3' with pid 26804
+2011-11-04 11:50:06,514 INFO spawned: '2' with pid 26805
+2011-11-04 11:50:07,735 INFO success: web entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 11:50:07,735 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 11:50:07,735 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 11:50:07,735 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 11:50:07,735 INFO success: 3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 11:50:07,735 INFO success: 2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 11:51:20,264 INFO stopped: 0 (terminated by SIGTERM)
+2011-11-04 11:51:20,265 INFO stopped: 1 (terminated by SIGTERM)
+2011-11-04 11:51:21,270 INFO stopped: 3 (terminated by SIGTERM)
+2011-11-04 11:51:22,276 INFO stopped: 2 (terminated by SIGTERM)
+2011-11-04 11:51:26,288 INFO spawned: '1' with pid 26973
+2011-11-04 11:51:26,292 INFO spawned: '0' with pid 26974
+2011-11-04 11:51:26,719 INFO spawned: '3' with pid 26989
+2011-11-04 11:51:27,751 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 11:51:27,751 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 11:51:27,751 INFO success: 3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 11:51:27,755 INFO spawned: '2' with pid 26995
+2011-11-04 11:51:28,758 INFO success: 2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 11:53:07,770 INFO waiting for web, jobmaster, 1, 0, 3, 2 to die
+2011-11-04 11:53:07,771 INFO stopped: 3 (terminated by SIGTERM)
+2011-11-04 11:53:07,771 INFO stopped: 0 (terminated by SIGTERM)
+2011-11-04 11:53:07,772 INFO stopped: 2 (terminated by SIGTERM)
+2011-11-04 11:53:07,773 INFO stopped: 1 (terminated by SIGTERM)
+2011-11-04 11:53:07,775 INFO stopped: jobmaster (terminated by SIGTERM)
+2011-11-04 11:53:07,798 INFO stopped: web (exit status 0)
+2011-11-04 11:53:12,831 CRIT Supervisor running as root (no user in config file)
+2011-11-04 11:53:12,864 INFO RPC interface 'supervisor' initialized
+2011-11-04 11:53:12,864 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2011-11-04 11:53:12,865 INFO daemonizing the supervisord process
+2011-11-04 11:53:12,866 INFO supervisord started with pid 27171
+2011-11-04 11:53:13,870 INFO spawned: 'web' with pid 27174
+2011-11-04 11:53:13,875 INFO spawned: 'jobmaster' with pid 27175
+2011-11-04 11:53:13,877 INFO spawned: '1' with pid 27176
+2011-11-04 11:53:13,879 INFO spawned: '0' with pid 27177
+2011-11-04 11:53:13,881 INFO spawned: '3' with pid 27178
+2011-11-04 11:53:13,896 INFO spawned: '2' with pid 27179
+2011-11-04 11:53:14,876 INFO success: web entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 11:53:14,877 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 11:53:14,877 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 11:53:14,889 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 11:53:14,889 INFO success: 3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 11:53:14,889 INFO success: 2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 11:53:14,910 INFO exited: web (exit status 1; not expected)
+2011-11-04 11:53:15,194 INFO spawned: 'web' with pid 27211
+2011-11-04 11:53:15,715 INFO exited: web (exit status 1; not expected)
+2011-11-04 11:53:16,789 INFO spawned: 'web' with pid 27221
+2011-11-04 11:53:17,323 INFO exited: web (exit status 1; not expected)
+2011-11-04 11:53:19,410 INFO spawned: 'web' with pid 27227
+2011-11-04 11:53:19,922 INFO exited: web (exit status 1; not expected)
+2011-11-04 11:53:23,217 INFO spawned: 'web' with pid 27240
+2011-11-04 11:53:23,733 INFO exited: web (exit status 1; not expected)
+2011-11-04 11:53:24,714 INFO gave up: web entered FATAL state, too many start retries too quickly
+2011-11-04 14:24:18,312 INFO waiting for jobmaster, 1, 0, 3, 2 to die
+2011-11-04 14:24:18,313 INFO stopped: 1 (terminated by SIGTERM)
+2011-11-04 14:24:18,313 INFO stopped: 0 (terminated by SIGTERM)
+2011-11-04 14:24:18,313 INFO stopped: 3 (terminated by SIGTERM)
+2011-11-04 14:24:18,313 INFO stopped: 2 (terminated by SIGTERM)
+2011-11-04 14:24:18,315 INFO stopped: jobmaster (terminated by SIGTERM)
+2011-11-04 14:41:14,070 CRIT Supervisor running as root (no user in config file)
+2011-11-04 14:41:14,105 INFO RPC interface 'supervisor' initialized
+2011-11-04 14:41:14,106 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2011-11-04 14:41:14,108 INFO daemonizing the supervisord process
+2011-11-04 14:41:14,108 INFO supervisord started with pid 8047
+2011-11-04 14:41:15,111 INFO spawned: 'web' with pid 8048
+2011-11-04 14:41:15,113 INFO spawned: 'jobmaster' with pid 8049
+2011-11-04 14:41:15,116 INFO spawned: '1' with pid 8050
+2011-11-04 14:41:15,127 INFO spawned: '0' with pid 8051
+2011-11-04 14:41:15,130 INFO spawned: '3' with pid 8052
+2011-11-04 14:41:15,144 INFO spawned: '2' with pid 8053
+2011-11-04 14:41:15,757 INFO exited: 2 (exit status 0; not expected)
+2011-11-04 14:41:15,876 INFO exited: 1 (exit status 0; not expected)
+2011-11-04 14:41:15,931 INFO exited: 3 (exit status 0; not expected)
+2011-11-04 14:41:15,932 INFO exited: 0 (exit status 0; not expected)
+2011-11-04 14:41:16,189 INFO success: web entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:41:16,189 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:41:16,210 INFO exited: web (exit status 1; not expected)
+2011-11-04 14:41:16,870 INFO spawned: 'web' with pid 8090
+2011-11-04 14:41:16,872 INFO spawned: '2' with pid 8091
+2011-11-04 14:41:16,880 INFO spawned: '1' with pid 8092
+2011-11-04 14:41:17,237 INFO spawned: '0' with pid 8103
+2011-11-04 14:41:17,240 INFO spawned: '3' with pid 8104
+2011-11-04 14:41:17,270 INFO exited: 1 (exit status 0; not expected)
+2011-11-04 14:41:17,361 INFO exited: 2 (exit status 0; not expected)
+2011-11-04 14:41:17,706 INFO exited: 0 (exit status 0; not expected)
+2011-11-04 14:41:17,742 INFO exited: 3 (exit status 0; not expected)
+2011-11-04 14:41:17,760 INFO exited: web (exit status 1; not expected)
+2011-11-04 14:41:18,763 INFO spawned: 'web' with pid 8124
+2011-11-04 14:41:19,273 INFO spawned: '1' with pid 8130
+2011-11-04 14:41:19,300 INFO exited: web (exit status 1; not expected)
+2011-11-04 14:41:19,498 INFO spawned: '2' with pid 8137
+2011-11-04 14:41:19,524 INFO exited: 1 (exit status 0; not expected)
+2011-11-04 14:41:19,723 INFO spawned: '0' with pid 8144
+2011-11-04 14:41:19,738 INFO exited: 2 (exit status 0; not expected)
+2011-11-04 14:41:19,944 INFO spawned: '3' with pid 8151
+2011-11-04 14:41:19,954 INFO exited: 0 (exit status 0; not expected)
+2011-11-04 14:41:20,174 INFO exited: 3 (exit status 0; not expected)
+2011-11-04 14:41:21,908 INFO spawned: 'web' with pid 8158
+2011-11-04 14:41:22,432 INFO exited: web (exit status 1; not expected)
+2011-11-04 14:41:23,175 INFO spawned: '1' with pid 8164
+2011-11-04 14:41:23,177 INFO spawned: '0' with pid 8165
+2011-11-04 14:41:23,179 INFO spawned: '3' with pid 8166
+2011-11-04 14:41:23,197 INFO spawned: '2' with pid 8167
+2011-11-04 14:41:23,757 INFO exited: 0 (exit status 0; not expected)
+2011-11-04 14:41:23,757 INFO gave up: 0 entered FATAL state, too many start retries too quickly
+2011-11-04 14:41:23,768 INFO exited: 1 (exit status 0; not expected)
+2011-11-04 14:41:23,778 INFO gave up: 1 entered FATAL state, too many start retries too quickly
+2011-11-04 14:41:23,799 INFO exited: 2 (exit status 0; not expected)
+2011-11-04 14:41:23,813 INFO gave up: 2 entered FATAL state, too many start retries too quickly
+2011-11-04 14:41:23,824 INFO exited: 3 (exit status 0; not expected)
+2011-11-04 14:41:24,825 INFO gave up: 3 entered FATAL state, too many start retries too quickly
+2011-11-04 14:41:25,830 INFO spawned: 'web' with pid 8194
+2011-11-04 14:41:26,361 INFO exited: web (exit status 1; not expected)
+2011-11-04 14:41:27,362 INFO gave up: web entered FATAL state, too many start retries too quickly
+2011-11-04 14:41:41,288 INFO spawned: '1' with pid 8218
+2011-11-04 14:41:41,291 INFO spawned: '0' with pid 8219
+2011-11-04 14:41:41,813 INFO spawned: '3' with pid 8266
+2011-11-04 14:41:42,914 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:41:42,914 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:41:42,914 INFO success: 3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:41:42,916 INFO spawned: '2' with pid 8284
+2011-11-04 14:41:43,918 INFO success: 2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:45:06,740 INFO waiting for jobmaster, 1, 0, 3, 2 to die
+2011-11-04 14:45:06,746 INFO stopped: 3 (terminated by SIGTERM)
+2011-11-04 14:45:06,746 INFO stopped: 2 (terminated by SIGTERM)
+2011-11-04 14:45:06,749 INFO stopped: 1 (terminated by SIGTERM)
+2011-11-04 14:45:06,749 INFO stopped: 0 (terminated by SIGTERM)
+2011-11-04 14:45:06,751 INFO stopped: jobmaster (terminated by SIGTERM)
+2011-11-04 14:45:24,136 CRIT Supervisor running as root (no user in config file)
+2011-11-04 14:45:24,169 INFO RPC interface 'supervisor' initialized
+2011-11-04 14:45:24,169 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2011-11-04 14:45:24,170 INFO daemonizing the supervisord process
+2011-11-04 14:45:24,171 INFO supervisord started with pid 8763
+2011-11-04 14:45:25,176 INFO spawned: 'web' with pid 8766
+2011-11-04 14:45:25,180 INFO spawned: 'jobmaster' with pid 8767
+2011-11-04 14:45:25,182 INFO spawned: '1' with pid 8768
+2011-11-04 14:45:25,185 INFO spawned: '0' with pid 8769
+2011-11-04 14:45:25,187 INFO spawned: '3' with pid 8770
+2011-11-04 14:45:25,189 INFO spawned: '2' with pid 8771
+2011-11-04 14:45:26,246 INFO success: web entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:45:26,246 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:45:26,246 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:45:26,246 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:45:26,246 INFO success: 3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:45:26,246 INFO success: 2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:45:26,268 INFO exited: web (exit status 1; not expected)
+2011-11-04 14:45:26,976 INFO spawned: 'web' with pid 8805
+2011-11-04 14:45:27,493 INFO exited: web (exit status 1; not expected)
+2011-11-04 14:45:28,497 INFO spawned: 'web' with pid 8811
+2011-11-04 14:45:29,029 INFO exited: web (exit status 1; not expected)
+2011-11-04 14:45:31,246 INFO spawned: 'web' with pid 8819
+2011-11-04 14:45:31,769 INFO exited: web (exit status 1; not expected)
+2011-11-04 14:45:34,775 INFO spawned: 'web' with pid 8828
+2011-11-04 14:45:35,336 INFO exited: web (exit status 1; not expected)
+2011-11-04 14:45:35,959 INFO gave up: web entered FATAL state, too many start retries too quickly
+2011-11-04 14:46:36,300 INFO waiting for jobmaster, 1, 0, 3, 2 to die
+2011-11-04 14:46:36,301 INFO stopped: 2 (terminated by SIGTERM)
+2011-11-04 14:46:36,302 INFO stopped: 3 (terminated by SIGTERM)
+2011-11-04 14:46:36,306 INFO stopped: 1 (terminated by SIGTERM)
+2011-11-04 14:46:36,306 INFO stopped: 0 (terminated by SIGTERM)
+2011-11-04 14:46:36,308 INFO stopped: jobmaster (terminated by SIGTERM)
+2011-11-04 14:46:43,791 CRIT Supervisor running as root (no user in config file)
+2011-11-04 14:46:43,824 INFO RPC interface 'supervisor' initialized
+2011-11-04 14:46:43,824 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2011-11-04 14:46:43,825 INFO daemonizing the supervisord process
+2011-11-04 14:46:43,826 INFO supervisord started with pid 8909
+2011-11-04 14:46:44,831 INFO spawned: 'web' with pid 8910
+2011-11-04 14:46:44,835 INFO spawned: 'jobmaster' with pid 8911
+2011-11-04 14:46:44,837 INFO spawned: '1' with pid 8912
+2011-11-04 14:46:44,840 INFO spawned: '0' with pid 8913
+2011-11-04 14:46:44,842 INFO spawned: '3' with pid 8914
+2011-11-04 14:46:44,857 INFO spawned: '2' with pid 8915
+2011-11-04 14:46:45,875 INFO success: web entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:46:45,875 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:46:45,875 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:46:45,875 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:46:45,875 INFO success: 3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:46:45,875 INFO success: 2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:46:46,180 INFO exited: web (exit status 1; not expected)
+2011-11-04 14:46:46,280 INFO spawned: 'web' with pid 8951
+2011-11-04 14:46:46,806 INFO exited: web (exit status 1; not expected)
+2011-11-04 14:46:47,884 INFO spawned: 'web' with pid 8957
+2011-11-04 14:46:48,410 INFO exited: web (exit status 1; not expected)
+2011-11-04 14:46:50,494 INFO spawned: 'web' with pid 8963
+2011-11-04 14:46:51,019 INFO exited: web (exit status 1; not expected)
+2011-11-04 14:46:54,097 INFO spawned: 'web' with pid 8971
+2011-11-04 14:46:54,614 INFO exited: web (exit status 1; not expected)
+2011-11-04 14:46:54,695 INFO gave up: web entered FATAL state, too many start retries too quickly
+2011-11-04 14:48:12,837 INFO stopped: 1 (terminated by SIGTERM)
+2011-11-04 14:48:12,837 INFO stopped: 0 (terminated by SIGTERM)
+2011-11-04 14:48:13,003 INFO stopped: 3 (terminated by SIGTERM)
+2011-11-04 14:48:13,206 INFO stopped: 2 (terminated by SIGTERM)
+2011-11-04 14:48:17,227 INFO spawned: '1' with pid 9048
+2011-11-04 14:48:17,230 INFO spawned: '0' with pid 9049
+2011-11-04 14:48:18,233 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:48:18,233 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:48:18,236 INFO spawned: '3' with pid 9060
+2011-11-04 14:48:19,239 INFO success: 3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:48:19,243 INFO spawned: '2' with pid 9066
+2011-11-04 14:48:20,409 INFO success: 2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:49:25,647 INFO stopped: 1 (terminated by SIGTERM)
+2011-11-04 14:49:25,650 INFO stopped: 0 (terminated by SIGTERM)
+2011-11-04 14:49:25,711 INFO stopped: 3 (terminated by SIGTERM)
+2011-11-04 14:49:25,912 INFO stopped: 2 (terminated by SIGTERM)
+2011-11-04 14:49:29,932 INFO spawned: '1' with pid 9158
+2011-11-04 14:49:29,935 INFO spawned: '0' with pid 9159
+2011-11-04 14:49:30,113 INFO spawned: '3' with pid 9168
+2011-11-04 14:49:30,228 INFO spawned: '2' with pid 9172
+2011-11-04 14:49:31,032 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:49:31,032 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:49:31,232 INFO success: 3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:49:31,232 INFO success: 2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:49:48,084 INFO stopped: 1 (terminated by SIGTERM)
+2011-11-04 14:49:48,084 INFO stopped: 0 (terminated by SIGTERM)
+2011-11-04 14:49:48,149 INFO stopped: 3 (terminated by SIGTERM)
+2011-11-04 14:49:48,352 INFO stopped: 2 (terminated by SIGTERM)
+2011-11-04 14:49:52,154 INFO spawned: '1' with pid 9220
+2011-11-04 14:49:52,160 INFO spawned: '0' with pid 9221
+2011-11-04 14:49:52,407 INFO spawned: '3' with pid 9233
+2011-11-04 14:49:53,413 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:49:53,413 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:49:53,413 INFO success: 3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:49:53,415 INFO spawned: '2' with pid 9240
+2011-11-04 14:49:54,417 INFO success: 2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:52:50,574 INFO waiting for jobmaster, 1, 0, 3, 2 to die
+2011-11-04 14:52:50,575 INFO stopped: 1 (terminated by SIGTERM)
+2011-11-04 14:52:50,575 INFO stopped: 0 (terminated by SIGTERM)
+2011-11-04 14:52:50,575 INFO stopped: 3 (terminated by SIGTERM)
+2011-11-04 14:52:50,575 INFO stopped: 2 (terminated by SIGTERM)
+2011-11-04 14:52:50,577 INFO stopped: jobmaster (terminated by SIGTERM)
+2011-11-04 14:53:02,824 CRIT Supervisor running as root (no user in config file)
+2011-11-04 14:53:02,858 INFO RPC interface 'supervisor' initialized
+2011-11-04 14:53:02,859 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2011-11-04 14:53:02,860 INFO daemonizing the supervisord process
+2011-11-04 14:53:02,860 INFO supervisord started with pid 9623
+2011-11-04 14:53:03,864 INFO spawned: 'web' with pid 9624
+2011-11-04 14:53:03,866 INFO spawned: 'jobmaster' with pid 9625
+2011-11-04 14:53:03,868 INFO spawned: '1' with pid 9626
+2011-11-04 14:53:03,872 INFO spawned: '0' with pid 9627
+2011-11-04 14:53:03,875 INFO spawned: '3' with pid 9628
+2011-11-04 14:53:03,892 INFO spawned: '2' with pid 9629
+2011-11-04 14:53:04,894 INFO success: web entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:53:04,895 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:53:04,895 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:53:04,895 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:53:04,895 INFO success: 3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:53:04,895 INFO success: 2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-04 14:53:04,992 INFO exited: web (exit status 1; not expected)
+2011-11-04 14:53:05,185 INFO spawned: 'web' with pid 9661
+2011-11-04 14:53:05,704 INFO exited: web (exit status 1; not expected)
+2011-11-04 14:53:06,709 INFO spawned: 'web' with pid 9671
+2011-11-04 14:53:07,245 INFO exited: web (exit status 1; not expected)
+2011-11-04 14:53:09,854 INFO spawned: 'web' with pid 9677
+2011-11-04 14:53:10,382 INFO exited: web (exit status 1; not expected)
+2011-11-04 14:53:13,668 INFO spawned: 'web' with pid 9688
+2011-11-04 14:53:14,200 INFO exited: web (exit status 1; not expected)
+2011-11-04 14:53:15,201 INFO gave up: web entered FATAL state, too many start retries too quickly

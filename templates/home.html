@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible"
+  content="IE=EmulateIE7; IE=EmulateIE9">
+<title>pinglinhtinh</title>
+<script type="text/javascript" src="/public/scripts/dygraph-dev.js"></script>
+<style>
+html {
+  font-family: Helvetica, Verdana, Arial, sans-serif;
+  font-size: 12px;
+  background: #222;
+  color: #333;
+}
+
+a {
+    color: #0088CC;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    opacity: 0.9;
+}
+
+.graph-name {
+border-top: 1px solid #F1F1F1;
+    display: block;
+    margin: 25px 0 0;
+    padding: 15px 0 5px;
+    text-align: center;
+    width: 100%;
+}
+
+#main {
+   width: 800px;
+   margin: 20px auto;
+   
+   background: none repeat scroll 0 0 #fafafa;
+    box-shadow: 0 0 20px #111111;
+    color: #333333;
+    padding: 20px 60px 125px 75px;
+    text-align: justify;
+    text-shadow: 0 1px 1px #DDD;
+}
+
+.group {
+  margin: 75px 0 25px;
+}
+
+.labels {
+  text-align: right;
+  margin-bottom: 5px;
+  background: transparent;
+}
+
+ header { 
+ text-align: center;
+ 
+ }
+ 
+ h2 {
+  font-size: 230%;
+  font-weight: normal;
+ }
+
+</style>
+</head>
+<body>
+<div id='main'>
+  <header>
+    <h2>pinglinhtinh</h2>
+    <p>
+            <b>Show Series:</b> 
+            <input type=checkbox id="0" checked onClick="change(this)"> 
+            <label for="0">Connect</label>
+            
+            <input type=checkbox id="1" checked onClick="change(this)">
+            <label for="1">TTFB</label>
+            
+            <input type=checkbox id="2" checked onClick="change(this)">
+            <label for="2">Total</label>
+     </p>
+  </header>
+{% for domain in domains %}
+  <h3  class='group'><a href='#{{ domain | md5sum }}'>{{ domain }}</a></h3>
+  <div id="{{ domain | md5sum }}" class='more'>
+  {% for url in urls %}
+    {% if domain in url %}
+      <div>
+        <h4 class='graph-name'><a href='{{ url }}' target='_blank'>{{ url }}</a></h4>
+
+        <div id="{{ url | md5sum }}"></div>
+      </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+{% endfor %}
+</div>
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+{% for url in urls %}
+        <script type="text/javascript" src="/data.js?url={{ url }}"></script>
+        <script type="text/javascript">
+            g_{{ url | md5sum }} = new Dygraph(
+                    document.getElementById("{{ url | md5sum }}"),
+                    dataset_{{ url | md5sum }}, {
+                        rollPeriod: 1,
+                        gridLineColor: '#ccc',
+                        visibility: [true, true],
+                        colors: ['#ff8c00', '#4682b4', '#9acd32', '#dc143c', '#9932cc'],
+                        width: 800,
+                        height: 200,
+//                         title: 'Response time (miliseconds)&emsp;',
+                        titleHeight: 20,
+                        axisLabelFontSize: 11,
+                        highlightCircleSize: 3,
+                        showRangeSelector: true,
+                        rangeSelectorHeight: 20,
+                        labelsKMG2: true,
+                        includeZero: true,
+                        hideOverlayOnMouseOut: true,
+                        labelsSeparateLines: '-',
+                        labelsDivStyles: {
+                            'backgroundColor': 'transparent',
+                            'text-align': 'right',
+                            'font-size': '11px',
+                            'top': '5px !important',
+                            'right': '10px !important',
+                            'left': 'auto !important',
+                        },
+                        labels: ["Date", "Connect", "TTFB", "Total"],
+                        strokeWidth: 1.0,
+                        // parses CSV file with unix timestamps in the first column
+                        xValueFormatter: Dygraph.dateString_,
+                        xValueParser: function(x) { return 1000*parseInt(x); },
+                        xTicker: Dygraph.dateTicker
+                      }
+                  );
+        </script>
+{% endfor %}
+        
+<script>
+function change(el) {
+    {% for url in urls %}
+      g_{{ url | md5sum }}.setVisibility(parseInt(el.id), el.checked);
+    {% endfor %}
+ };
+ 
+$(document).ready(function() {
+    
+//     $('.group').live('click', function(e) {
+//        var id = $('a', this).attr('href');
+//        console.log(id);
+//        $(id).slideToggle();
+//     })
+})
+</script>
+</body>
+</html>
