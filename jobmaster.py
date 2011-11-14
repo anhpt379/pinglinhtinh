@@ -16,9 +16,15 @@ if __name__ == '__main__':
   while True:
     ts = int(time())
     if ts % settings.step_size == 0:
-      urls = api.get_urls()
-      for url in urls:
+      urls = api.get_urls_and_hostname()
+      for info in urls:
+        url = info.get('url')
+        hostname = info.get('hostname')
+        
         ts += settings.step_size
         worker.LOG.debug('Sent to queue: %s - %s' % (ts, url))
-        worker.QUEUE.put('%s|%s' % (ts, url))
+        if hostname:
+          worker.QUEUE.put('%s|%s|%s' % (ts, url, hostname))
+        else:
+          worker.QUEUE.put('%s|%s|' % (ts, url))
     sleep(1)

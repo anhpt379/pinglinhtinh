@@ -39,7 +39,7 @@ def async(func):
 
 @async
 def check(url): 
-  at, url = url.split('|') 
+  at, url, hostname = url.split('|') 
   at = int(at)
   while True:
     current_ts = int(time())
@@ -50,7 +50,11 @@ def check(url):
       return False
     else:
       break
-  cmd = 'curl -o /dev/null -w "connect:%{time_connect}\tttfb:%{time_starttransfer}\ttotal:%{time_total} \n" ' + url
+  if hostname:
+    cmd = 'curl -o /dev/null -w "connect:%{time_connect}\tttfb:%{time_starttransfer}\ttotal:%{time_total} \n" -H "Host: ' + hostname + '" '  + url
+  else:
+    cmd = 'curl -o /dev/null -w "connect:%{time_connect}\tttfb:%{time_starttransfer}\ttotal:%{time_total} \n" ' + url
+  LOG.debug(cmd)
   output = getoutput(cmd)
   data = output.split('\n')[-1].split()
   info = dict()

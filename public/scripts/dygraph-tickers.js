@@ -174,9 +174,9 @@ Dygraph.numericTicks = function(a, b, pixels, opts, dygraph, vals) {
     if (k_labels.length > 0) {
       // TODO(danvk): should this be integrated into the axisLabelFormatter?
       // Round up to an appropriate unit.
-      if (absTickV < k && opts("labelsKMG2")) {
-	 label = Dygraph.round_(tickV * 100, 2) + 'm';
-      } else {      
+//      if (absTickV < k && opts("labelsKMG2")) {
+//	 label = Dygraph.round_(tickV * 100, 2) + 'm';
+//      } else {      
 	  var n = k*k*k*k;
           for (var j = 3; j >= 0; j--, n /= k) {
     	        if (absTickV >= n) {
@@ -185,7 +185,7 @@ Dygraph.numericTicks = function(a, b, pixels, opts, dygraph, vals) {
     	          break;
     	        }
     	      }
-      }
+//      }
 
     }
     ticks[i].label = label;

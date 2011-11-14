@@ -354,3 +354,450 @@
 2011-11-04 14:53:13,668 INFO spawned: 'web' with pid 9688
 2011-11-04 14:53:14,200 INFO exited: web (exit status 1; not expected)
 2011-11-04 14:53:15,201 INFO gave up: web entered FATAL state, too many start retries too quickly
+2011-11-14 17:36:36,241 CRIT Supervisor running as root (no user in config file)
+2011-11-14 17:36:36,362 INFO RPC interface 'supervisor' initialized
+2011-11-14 17:36:36,363 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2011-11-14 17:36:36,364 INFO daemonizing the supervisord process
+2011-11-14 17:36:36,364 INFO supervisord started with pid 21397
+2011-11-14 17:36:37,367 INFO spawned: 'web' with pid 21398
+2011-11-14 17:36:37,369 INFO spawned: 'jobmaster' with pid 21399
+2011-11-14 17:36:37,372 INFO spawned: '1' with pid 21400
+2011-11-14 17:36:37,383 INFO spawned: '0' with pid 21401
+2011-11-14 17:36:37,395 INFO spawned: '3' with pid 21402
+2011-11-14 17:36:37,397 INFO spawned: '2' with pid 21403
+2011-11-14 17:36:38,221 INFO exited: 1 (exit status 1; not expected)
+2011-11-14 17:36:38,356 INFO exited: 3 (exit status 1; not expected)
+2011-11-14 17:36:38,385 INFO success: web entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:36:38,385 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:36:38,385 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:36:38,403 INFO success: 2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:36:38,405 INFO exited: 2 (exit status 1; not expected)
+2011-11-14 17:36:38,421 INFO spawned: '2' with pid 21424
+2011-11-14 17:36:38,450 INFO exited: 0 (exit status 1; not expected)
+2011-11-14 17:36:38,721 INFO spawned: '0' with pid 21434
+2011-11-14 17:36:38,752 INFO exited: 2 (exit status 1; not expected)
+2011-11-14 17:36:39,024 INFO exited: 0 (exit status 1; not expected)
+2011-11-14 17:36:39,311 INFO spawned: '1' with pid 21444
+2011-11-14 17:36:39,552 INFO spawned: '3' with pid 21449
+2011-11-14 17:36:39,561 INFO exited: 1 (exit status 1; not expected)
+2011-11-14 17:36:39,806 INFO spawned: '2' with pid 21454
+2011-11-14 17:36:39,816 INFO exited: 3 (exit status 1; not expected)
+2011-11-14 17:36:40,048 INFO spawned: '0' with pid 21459
+2011-11-14 17:36:40,062 INFO exited: 2 (exit status 1; not expected)
+2011-11-14 17:36:40,307 INFO exited: 0 (exit status 1; not expected)
+2011-11-14 17:36:40,326 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:36:41,331 INFO spawned: 'jobmaster' with pid 21464
+2011-11-14 17:36:42,334 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:36:42,335 INFO spawned: '1' with pid 21469
+2011-11-14 17:36:42,338 INFO spawned: '0' with pid 21470
+2011-11-14 17:36:42,341 INFO spawned: '3' with pid 21471
+2011-11-14 17:36:42,351 INFO spawned: '2' with pid 21472
+2011-11-14 17:36:42,898 INFO exited: 1 (exit status 1; not expected)
+2011-11-14 17:36:42,901 INFO exited: 0 (exit status 1; not expected)
+2011-11-14 17:36:42,955 INFO exited: 3 (exit status 1; not expected)
+2011-11-14 17:36:42,992 INFO exited: 2 (exit status 1; not expected)
+2011-11-14 17:36:45,590 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:36:46,595 INFO spawned: 'jobmaster' with pid 21492
+2011-11-14 17:36:46,601 INFO spawned: '1' with pid 21493
+2011-11-14 17:36:46,605 INFO spawned: '0' with pid 21494
+2011-11-14 17:36:46,608 INFO spawned: '3' with pid 21495
+2011-11-14 17:36:46,610 INFO spawned: '2' with pid 21496
+2011-11-14 17:36:47,321 INFO exited: 1 (exit status 1; not expected)
+2011-11-14 17:36:47,322 INFO gave up: 1 entered FATAL state, too many start retries too quickly
+2011-11-14 17:36:47,329 INFO exited: 3 (exit status 1; not expected)
+2011-11-14 17:36:47,351 INFO gave up: 3 entered FATAL state, too many start retries too quickly
+2011-11-14 17:36:47,361 INFO exited: 2 (exit status 1; not expected)
+2011-11-14 17:36:47,369 INFO gave up: 2 entered FATAL state, too many start retries too quickly
+2011-11-14 17:36:47,378 INFO exited: 0 (exit status 1; not expected)
+2011-11-14 17:36:48,379 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:36:48,379 INFO gave up: 0 entered FATAL state, too many start retries too quickly
+2011-11-14 17:36:50,267 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:36:51,270 INFO spawned: 'jobmaster' with pid 21520
+2011-11-14 17:36:52,271 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:36:55,540 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:36:56,543 INFO spawned: 'jobmaster' with pid 21532
+2011-11-14 17:36:57,545 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:37:00,831 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:37:01,834 INFO spawned: 'jobmaster' with pid 21537
+2011-11-14 17:37:02,836 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:37:05,112 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:37:06,115 INFO spawned: 'jobmaster' with pid 21544
+2011-11-14 17:37:07,117 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:37:10,392 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:37:11,397 INFO spawned: 'jobmaster' with pid 21549
+2011-11-14 17:37:12,399 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:37:15,668 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:37:16,673 INFO spawned: 'jobmaster' with pid 21561
+2011-11-14 17:37:17,675 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:37:20,925 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:37:21,929 INFO spawned: 'jobmaster' with pid 21568
+2011-11-14 17:37:22,932 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:37:25,196 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:37:26,201 INFO spawned: 'jobmaster' with pid 21575
+2011-11-14 17:37:27,203 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:37:30,464 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:37:31,467 INFO spawned: 'jobmaster' with pid 21582
+2011-11-14 17:37:32,468 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:37:35,773 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:37:36,775 INFO spawned: 'jobmaster' with pid 21594
+2011-11-14 17:37:37,777 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:37:40,054 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:37:41,056 INFO spawned: 'jobmaster' with pid 21599
+2011-11-14 17:37:42,058 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:37:45,330 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:37:46,332 INFO spawned: 'jobmaster' with pid 21607
+2011-11-14 17:37:47,334 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:37:50,622 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:37:51,624 INFO spawned: 'jobmaster' with pid 21612
+2011-11-14 17:37:52,626 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:37:55,880 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:37:56,886 INFO spawned: 'jobmaster' with pid 21619
+2011-11-14 17:37:57,888 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:38:00,157 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:38:01,161 INFO spawned: 'jobmaster' with pid 21624
+2011-11-14 17:38:02,164 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:38:05,430 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:38:06,435 INFO spawned: 'jobmaster' with pid 21631
+2011-11-14 17:38:07,438 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:38:10,704 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:38:11,707 INFO spawned: 'jobmaster' with pid 21636
+2011-11-14 17:38:12,708 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:38:15,972 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:38:16,976 INFO spawned: 'jobmaster' with pid 21643
+2011-11-14 17:38:17,978 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:38:20,239 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:38:21,244 INFO spawned: 'jobmaster' with pid 21650
+2011-11-14 17:38:22,246 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:38:25,522 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:38:26,526 INFO spawned: 'jobmaster' with pid 21659
+2011-11-14 17:38:27,529 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:38:30,802 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:38:31,804 INFO spawned: 'jobmaster' with pid 21665
+2011-11-14 17:38:32,806 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:38:35,088 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:38:36,090 INFO spawned: 'jobmaster' with pid 21674
+2011-11-14 17:38:37,092 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:38:40,343 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:38:41,347 INFO spawned: 'jobmaster' with pid 21679
+2011-11-14 17:38:42,350 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:38:45,608 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:38:46,612 INFO spawned: 'jobmaster' with pid 21687
+2011-11-14 17:38:47,615 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:38:50,869 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:38:51,873 INFO spawned: 'jobmaster' with pid 21694
+2011-11-14 17:38:52,879 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:38:55,128 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:38:56,130 INFO spawned: 'jobmaster' with pid 21702
+2011-11-14 17:38:57,132 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:39:00,384 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:39:01,387 INFO spawned: 'jobmaster' with pid 21708
+2011-11-14 17:39:02,389 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:39:05,649 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:39:06,652 INFO spawned: 'jobmaster' with pid 21721
+2011-11-14 17:39:07,654 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:39:10,916 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:39:11,920 INFO spawned: 'jobmaster' with pid 21726
+2011-11-14 17:39:12,922 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:39:15,179 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:39:16,182 INFO spawned: 'jobmaster' with pid 21733
+2011-11-14 17:39:17,184 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:39:20,460 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:39:21,464 INFO spawned: 'jobmaster' with pid 21738
+2011-11-14 17:39:22,467 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:39:25,726 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:39:26,731 INFO spawned: 'jobmaster' with pid 21748
+2011-11-14 17:39:27,733 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:39:30,997 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:39:32,000 INFO spawned: 'jobmaster' with pid 21753
+2011-11-14 17:39:33,001 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:39:35,277 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:39:36,282 INFO spawned: 'jobmaster' with pid 21760
+2011-11-14 17:39:37,284 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:39:40,553 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:39:41,558 INFO spawned: 'jobmaster' with pid 21766
+2011-11-14 17:39:42,561 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:39:45,823 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:39:46,827 INFO spawned: 'jobmaster' with pid 21773
+2011-11-14 17:39:47,831 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:39:50,107 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:39:51,111 INFO spawned: 'jobmaster' with pid 21778
+2011-11-14 17:39:52,114 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:39:55,445 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:39:56,449 INFO spawned: 'jobmaster' with pid 21788
+2011-11-14 17:39:57,452 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:40:00,716 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:40:01,721 INFO spawned: 'jobmaster' with pid 21793
+2011-11-14 17:40:02,723 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:40:05,985 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:40:06,988 INFO spawned: 'jobmaster' with pid 21824
+2011-11-14 17:40:07,989 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:40:10,240 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:40:11,242 INFO spawned: 'jobmaster' with pid 21829
+2011-11-14 17:40:12,244 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:40:15,503 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:40:16,508 INFO spawned: 'jobmaster' with pid 21911
+2011-11-14 17:40:17,510 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:40:20,767 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:40:21,772 INFO spawned: 'jobmaster' with pid 21916
+2011-11-14 17:40:22,774 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:40:25,051 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:40:26,054 INFO spawned: 'jobmaster' with pid 21923
+2011-11-14 17:40:27,055 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:40:30,324 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:40:31,326 INFO spawned: 'jobmaster' with pid 21928
+2011-11-14 17:40:32,328 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:40:35,626 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:40:36,631 INFO spawned: 'jobmaster' with pid 21935
+2011-11-14 17:40:37,634 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:40:40,926 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:40:41,929 INFO spawned: 'jobmaster' with pid 21940
+2011-11-14 17:40:42,931 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:40:45,188 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:40:46,190 INFO spawned: 'jobmaster' with pid 21947
+2011-11-14 17:40:47,192 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:40:50,471 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:40:51,476 INFO spawned: 'jobmaster' with pid 21952
+2011-11-14 17:40:52,478 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:40:55,750 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:40:56,754 INFO spawned: 'jobmaster' with pid 21959
+2011-11-14 17:40:57,757 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:41:01,016 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:41:02,021 INFO spawned: 'jobmaster' with pid 21964
+2011-11-14 17:41:03,023 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:41:05,303 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:41:06,306 INFO spawned: 'jobmaster' with pid 21971
+2011-11-14 17:41:07,307 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:41:10,570 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:41:11,574 INFO spawned: 'jobmaster' with pid 21976
+2011-11-14 17:41:12,576 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:41:15,057 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:41:16,062 INFO spawned: 'jobmaster' with pid 21983
+2011-11-14 17:41:17,064 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:41:20,338 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:41:21,341 INFO spawned: 'jobmaster' with pid 21990
+2011-11-14 17:41:22,343 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:41:25,621 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:41:26,624 INFO spawned: 'jobmaster' with pid 21998
+2011-11-14 17:41:27,626 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:41:30,902 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:41:31,906 INFO spawned: 'jobmaster' with pid 22003
+2011-11-14 17:41:32,908 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:41:35,185 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:41:36,188 INFO spawned: 'jobmaster' with pid 22012
+2011-11-14 17:41:37,189 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:41:40,438 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:41:41,443 INFO spawned: 'jobmaster' with pid 22017
+2011-11-14 17:41:42,446 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:41:45,717 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:41:46,721 INFO spawned: 'jobmaster' with pid 22024
+2011-11-14 17:41:47,726 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:41:50,985 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:41:51,988 INFO spawned: 'jobmaster' with pid 22029
+2011-11-14 17:41:52,990 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:41:55,245 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:41:56,250 INFO spawned: 'jobmaster' with pid 22036
+2011-11-14 17:41:57,253 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:42:00,515 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:42:01,520 INFO spawned: 'jobmaster' with pid 22046
+2011-11-14 17:42:02,522 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:42:05,795 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:42:06,799 INFO spawned: 'jobmaster' with pid 22093
+2011-11-14 17:42:07,801 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:42:10,172 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:42:11,175 INFO spawned: 'jobmaster' with pid 22103
+2011-11-14 17:42:12,177 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:42:15,439 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:42:16,443 INFO spawned: 'jobmaster' with pid 22111
+2011-11-14 17:42:17,445 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:42:20,696 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:42:21,699 INFO spawned: 'jobmaster' with pid 22121
+2011-11-14 17:42:22,701 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:42:25,954 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:42:26,959 INFO spawned: 'jobmaster' with pid 22133
+2011-11-14 17:42:27,962 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:42:30,231 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:42:31,236 INFO spawned: 'jobmaster' with pid 22143
+2011-11-14 17:42:32,238 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:42:35,509 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:42:36,514 INFO spawned: 'jobmaster' with pid 22156
+2011-11-14 17:42:37,515 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:42:40,784 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:42:41,788 INFO spawned: 'jobmaster' with pid 22166
+2011-11-14 17:42:42,791 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:42:45,066 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:42:46,069 INFO spawned: 'jobmaster' with pid 22174
+2011-11-14 17:42:47,071 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:42:50,327 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:42:51,331 INFO spawned: 'jobmaster' with pid 22180
+2011-11-14 17:42:52,334 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:42:55,604 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:42:56,607 INFO spawned: 'jobmaster' with pid 22188
+2011-11-14 17:42:57,609 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:43:00,865 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:43:01,870 INFO spawned: 'jobmaster' with pid 22194
+2011-11-14 17:43:02,875 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:43:05,136 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:43:06,141 INFO spawned: 'jobmaster' with pid 22201
+2011-11-14 17:43:07,143 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:43:10,411 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:43:11,414 INFO spawned: 'jobmaster' with pid 22209
+2011-11-14 17:43:12,416 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:43:15,677 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:43:16,681 INFO spawned: 'jobmaster' with pid 22219
+2011-11-14 17:43:17,682 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:43:20,949 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:43:21,953 INFO spawned: 'jobmaster' with pid 22224
+2011-11-14 17:43:22,956 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:43:25,214 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:43:26,218 INFO spawned: 'jobmaster' with pid 22231
+2011-11-14 17:43:27,221 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:43:30,497 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:43:31,501 INFO spawned: 'jobmaster' with pid 22237
+2011-11-14 17:43:32,504 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:43:35,780 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:43:36,783 INFO spawned: 'jobmaster' with pid 22265
+2011-11-14 17:43:37,785 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:43:40,061 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:43:41,064 INFO spawned: 'jobmaster' with pid 22302
+2011-11-14 17:43:42,065 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:43:45,347 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:43:46,352 INFO spawned: 'jobmaster' with pid 22311
+2011-11-14 17:43:47,355 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:43:50,613 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:43:51,616 INFO spawned: 'jobmaster' with pid 22351
+2011-11-14 17:43:52,618 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:43:55,929 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:43:56,934 INFO spawned: 'jobmaster' with pid 22360
+2011-11-14 17:43:57,936 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:43:59,918 INFO waiting for web, jobmaster to die
+2011-11-14 17:43:59,921 INFO stopped: jobmaster (terminated by SIGTERM)
+2011-11-14 17:43:59,947 INFO stopped: web (exit status 0)
+2011-11-14 17:44:03,100 CRIT Supervisor running as root (no user in config file)
+2011-11-14 17:44:03,134 INFO RPC interface 'supervisor' initialized
+2011-11-14 17:44:03,134 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2011-11-14 17:44:03,135 INFO daemonizing the supervisord process
+2011-11-14 17:44:03,136 INFO supervisord started with pid 22368
+2011-11-14 17:44:04,141 INFO spawned: 'web' with pid 22369
+2011-11-14 17:44:04,145 INFO spawned: 'jobmaster' with pid 22370
+2011-11-14 17:44:04,148 INFO spawned: '1' with pid 22371
+2011-11-14 17:44:04,151 INFO spawned: '0' with pid 22372
+2011-11-14 17:44:04,154 INFO spawned: '3' with pid 22373
+2011-11-14 17:44:04,156 INFO spawned: '2' with pid 22374
+2011-11-14 17:44:04,939 INFO exited: 1 (exit status 1; not expected)
+2011-11-14 17:44:05,006 INFO exited: 0 (exit status 1; not expected)
+2011-11-14 17:44:05,009 INFO exited: 2 (exit status 1; not expected)
+2011-11-14 17:44:05,018 INFO exited: 3 (exit status 1; not expected)
+2011-11-14 17:44:05,246 INFO success: web entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:44:05,246 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:44:05,959 INFO spawned: '1' with pid 22408
+2011-11-14 17:44:05,991 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:44:06,086 INFO spawned: 'jobmaster' with pid 22413
+2011-11-14 17:44:06,088 INFO spawned: '0' with pid 22414
+2011-11-14 17:44:06,090 INFO spawned: '3' with pid 22415
+2011-11-14 17:44:06,093 INFO spawned: '2' with pid 22416
+2011-11-14 17:44:06,335 INFO exited: 1 (exit status 1; not expected)
+2011-11-14 17:44:06,618 INFO exited: 2 (exit status 1; not expected)
+2011-11-14 17:44:06,688 INFO exited: 0 (exit status 1; not expected)
+2011-11-14 17:44:06,733 INFO exited: 3 (exit status 1; not expected)
+2011-11-14 17:44:07,735 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:44:09,203 INFO spawned: '1' with pid 22433
+2011-11-14 17:44:09,208 INFO spawned: '0' with pid 22434
+2011-11-14 17:44:09,215 INFO spawned: '3' with pid 22435
+2011-11-14 17:44:09,217 INFO spawned: '2' with pid 22436
+2011-11-14 17:44:09,559 INFO exited: 1 (exit status 1; not expected)
+2011-11-14 17:44:09,663 INFO exited: 2 (exit status 1; not expected)
+2011-11-14 17:44:09,761 INFO exited: 3 (exit status 1; not expected)
+2011-11-14 17:44:09,766 INFO exited: 0 (exit status 1; not expected)
+2011-11-14 17:44:10,735 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:44:11,740 INFO spawned: 'jobmaster' with pid 22453
+2011-11-14 17:44:13,206 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:44:13,209 INFO spawned: '1' with pid 22458
+2011-11-14 17:44:13,214 INFO spawned: '0' with pid 22459
+2011-11-14 17:44:13,222 INFO spawned: '3' with pid 22460
+2011-11-14 17:44:13,225 INFO spawned: '2' with pid 22461
+2011-11-14 17:44:13,763 INFO exited: 1 (exit status 1; not expected)
+2011-11-14 17:44:13,764 INFO gave up: 1 entered FATAL state, too many start retries too quickly
+2011-11-14 17:44:13,778 INFO exited: 0 (exit status 1; not expected)
+2011-11-14 17:44:13,785 INFO gave up: 0 entered FATAL state, too many start retries too quickly
+2011-11-14 17:44:13,786 INFO exited: 3 (exit status 1; not expected)
+2011-11-14 17:44:13,788 INFO gave up: 3 entered FATAL state, too many start retries too quickly
+2011-11-14 17:44:13,789 INFO exited: 2 (exit status 1; not expected)
+2011-11-14 17:44:14,474 INFO gave up: 2 entered FATAL state, too many start retries too quickly
+2011-11-14 17:44:16,003 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:44:17,008 INFO spawned: 'jobmaster' with pid 22480
+2011-11-14 17:44:18,010 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:44:20,267 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:44:21,272 INFO spawned: 'jobmaster' with pid 22488
+2011-11-14 17:44:22,275 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:44:25,534 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:44:26,538 INFO spawned: 'jobmaster' with pid 22511
+2011-11-14 17:44:27,541 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:44:30,809 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:44:31,811 INFO spawned: 'jobmaster' with pid 22518
+2011-11-14 17:44:32,813 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:44:35,073 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:44:36,076 INFO spawned: 'jobmaster' with pid 22525
+2011-11-14 17:44:37,078 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:44:40,344 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:44:41,349 INFO spawned: 'jobmaster' with pid 22531
+2011-11-14 17:44:42,351 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:44:45,825 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:44:46,828 INFO spawned: 'jobmaster' with pid 22539
+2011-11-14 17:44:47,830 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:44:50,085 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:44:51,088 INFO spawned: 'jobmaster' with pid 22544
+2011-11-14 17:44:52,090 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:44:55,351 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:44:56,355 INFO spawned: 'jobmaster' with pid 22553
+2011-11-14 17:44:57,358 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:45:00,623 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:45:01,628 INFO spawned: 'jobmaster' with pid 22560
+2011-11-14 17:45:02,631 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:45:05,899 INFO exited: jobmaster (exit status 1; not expected)
+2011-11-14 17:45:06,902 INFO spawned: 'jobmaster' with pid 22597
+2011-11-14 17:45:07,903 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:45:14,529 INFO waiting for web, jobmaster to die
+2011-11-14 17:45:14,534 INFO stopped: jobmaster (terminated by SIGTERM)
+2011-11-14 17:45:14,567 INFO stopped: web (exit status 0)
+2011-11-14 17:45:18,956 CRIT Supervisor running as root (no user in config file)
+2011-11-14 17:45:18,989 INFO RPC interface 'supervisor' initialized
+2011-11-14 17:45:18,989 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2011-11-14 17:45:18,990 INFO daemonizing the supervisord process
+2011-11-14 17:45:18,991 INFO supervisord started with pid 22605
+2011-11-14 17:45:19,996 INFO spawned: 'web' with pid 22606
+2011-11-14 17:45:20,001 INFO spawned: 'jobmaster' with pid 22607
+2011-11-14 17:45:20,006 INFO spawned: '1' with pid 22608
+2011-11-14 17:45:20,013 INFO spawned: '0' with pid 22609
+2011-11-14 17:45:20,023 INFO spawned: '3' with pid 22610
+2011-11-14 17:45:20,031 INFO spawned: '2' with pid 22611
+2011-11-14 17:45:20,993 INFO success: web entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:45:21,136 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:45:21,136 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:45:21,136 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:45:21,137 INFO success: 3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:45:21,137 INFO success: 2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:49:52,293 INFO stopped: 0 (terminated by SIGTERM)
+2011-11-14 17:49:52,299 INFO stopped: 1 (terminated by SIGTERM)
+2011-11-14 17:49:53,307 INFO stopped: 3 (terminated by SIGTERM)
+2011-11-14 17:49:54,314 INFO stopped: 2 (terminated by SIGTERM)
+2011-11-14 17:49:58,005 INFO spawned: '1' with pid 24906
+2011-11-14 17:49:58,028 INFO spawned: '0' with pid 24907
+2011-11-14 17:49:58,292 INFO spawned: '3' with pid 24921
+2011-11-14 17:49:59,300 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:49:59,300 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:49:59,300 INFO success: 3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:49:59,304 INFO spawned: '2' with pid 24937
+2011-11-14 17:50:00,995 INFO success: 2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:50:31,201 INFO stopped: jobmaster (terminated by SIGTERM)
+2011-11-14 17:50:32,213 INFO spawned: 'jobmaster' with pid 25120
+2011-11-14 17:50:33,216 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 17:52:45,467 INFO stopped: jobmaster (terminated by SIGTERM)
+2011-11-14 17:52:46,479 INFO spawned: 'jobmaster' with pid 26397
+2011-11-14 17:52:47,482 INFO success: jobmaster entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 18:00:42,442 INFO exited: web (terminated by SIGKILL; not expected)
+2011-11-14 18:00:43,448 INFO spawned: 'web' with pid 31391
+2011-11-14 18:00:44,984 INFO success: web entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 18:00:54,327 INFO exited: web (terminated by SIGKILL; not expected)
+2011-11-14 18:00:55,027 INFO spawned: 'web' with pid 31530
+2011-11-14 18:00:56,890 INFO success: web entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2011-11-14 18:01:00,690 INFO stopped: web (exit status 0)

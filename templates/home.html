@@ -4,76 +4,33 @@
 <meta http-equiv="X-UA-Compatible"
   content="IE=EmulateIE7; IE=EmulateIE9">
 <title>pinglinhtinh</title>
+<link rel="stylesheet" href="/public/styles/core.css">
+
+{% block top_scripts %}
 <script type="text/javascript" src="/public/scripts/dygraph-dev.js"></script>
-<style>
-html {
-  font-family: Helvetica, Verdana, Arial, sans-serif;
-  font-size: 12px;
-  background: #222;
-  color: #333;
-}
-
-a {
-    color: #0088CC;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-a:active {
-    opacity: 0.9;
-}
-
-.graph-name {
-border-top: 1px solid #F1F1F1;
-    display: block;
-    margin: 25px 0 0;
-    padding: 15px 0 5px;
-    text-align: center;
-    width: 100%;
-}
-
-#main {
-   width: 800px;
-   margin: 20px auto;
-   
-   background: none repeat scroll 0 0 #fafafa;
-    box-shadow: 0 0 20px #111111;
-    color: #333333;
-    padding: 20px 60px 125px 75px;
-    text-align: justify;
-    text-shadow: 0 1px 1px #DDD;
-}
-
-.group {
-  margin: 75px 0 25px;
-}
-
-.labels {
-  text-align: right;
-  margin-bottom: 5px;
-  background: transparent;
-}
-
- header { 
- text-align: center;
- 
- }
- 
- h2 {
-  font-size: 230%;
-  font-weight: normal;
- }
-
-</style>
+{% endblock %}
 </head>
 <body>
-<div id='main'>
   <header>
-    <h2>pinglinhtinh</h2>
-    <p>
+  {% block header %}
+    <div id='logo'><a href='/'><img src='/public/images/pin.png'/>pinglinhtinh</a></div>
+            
+    <div id='datetime-selector' class='hidden'>
+      <a href='#' id='back'>Back</a> | 
+      <b>From</b>
+      <input type="datetime-local" step=3600 name="from" />
+      <b>To</b>
+      <input type="datetime-local" step=3600 name="to" />
+    </div>
+    <div id='options'>
+            <select id='offset'>
+              <option value='7200' {% if offset == 7200 %}selected{% endif %}>Last 2 hours</option>
+              <option value='86400' {% if offset == 86400 %}selected{% endif %}>Last day</option>
+              <option value='604800' {% if offset == 604800 %}selected{% endif %}>Last week</option>
+              <option value='31536000' {% if offset == 31536000 %}selected{% endif %}>Last year</option>
+              <option value='datetime-selector'>from...to...</option>
+            </select>   
+    
             <b>Show Series:</b> 
             <input type=checkbox id="0" checked onClick="change(this)"> 
             <label for="0">Connect</label>
@@ -83,81 +40,153 @@ border-top: 1px solid #F1F1F1;
             
             <input type=checkbox id="2" checked onClick="change(this)">
             <label for="2">Total</label>
-     </p>
+            
+<!--             <input type=checkbox id="skip" checked> -->
+<!--             <b>Skip larger than 100ms</b> -->
+     </div>
+     <div id='preferences'><a href='/preferences'><i class='preferences-icon'></i>Preferences</a></div>
+   {% endblock %}
   </header>
-{% for domain in domains %}
-  <h3  class='group'><a href='#{{ domain | md5sum }}'>{{ domain }}</a></h3>
-  <div id="{{ domain | md5sum }}" class='more'>
-  {% for url in urls %}
-    {% if domain in url %}
-      <div>
-        <h4 class='graph-name'><a href='{{ url }}' target='_blank'>{{ url }}</a></h4>
-
-        <div id="{{ url | md5sum }}"></div>
-      </div>
-    {% endif %}
+<div id='main'>
+{% block main %}
+  <ul>
+  {% for domain in domains %}
+    <li class='domain' id="{{ domain | md5sum }}">
+        <a href='#{{ domain | md5sum }}' class='title'>{{ domain }}</a>{% if domains|length != 1 %} - <a href='/?domain={{ domain }}'>See more...</a>{% endif %}
+        <ul class='more'>
+        {% for info in urls %}
+          {% if domain in info.url %}
+            <li>
+              {% if info.hostname %}
+              <h4 class='graph-name'><a href='/?url={{ info.url }}'>{{ info.url }} ({{ info.hostname }})</a></h4>
+              {% else %}
+              <h4 class='graph-name'><a href='/?url={{ info.url }}'>{{ info.url }}</a></h4>
+              {% endif %}
+              <div id="i-{{ info.url | md5sum }}" class='info'></div> 
+              <div id="g_{{ info.url | md5sum }}"></div>
+            </li>
+          {% endif %}
+        {% endfor %}
+        </ul>
+    </li>
   {% endfor %}
-  </div>
-{% endfor %}
+  </ul>
+{% endblock %}
 </div>
 
+{% block scripts %}
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
-{% for url in urls %}
-        <script type="text/javascript" src="/data.js?url={{ url }}"></script>
+{% for info in urls %}
+        <script type="text/javascript" src="/data.js?url={{ info.url }}&offset={{ offset }}&skip={{ skip }}+"></script>
         <script type="text/javascript">
-            g_{{ url | md5sum }} = new Dygraph(
-                    document.getElementById("{{ url | md5sum }}"),
-                    dataset_{{ url | md5sum }}, {
-                        rollPeriod: 1,
-                        gridLineColor: '#ccc',
-                        visibility: [true, true],
-                        colors: ['#ff8c00', '#4682b4', '#9acd32', '#dc143c', '#9932cc'],
-                        width: 800,
-                        height: 200,
-//                         title: 'Response time (miliseconds)&emsp;',
-                        titleHeight: 20,
-                        axisLabelFontSize: 11,
-                        highlightCircleSize: 3,
-                        showRangeSelector: true,
-                        rangeSelectorHeight: 20,
-                        labelsKMG2: true,
-                        includeZero: true,
-                        hideOverlayOnMouseOut: true,
-                        labelsSeparateLines: '-',
-                        labelsDivStyles: {
-                            'backgroundColor': 'transparent',
-                            'text-align': 'right',
-                            'font-size': '11px',
-                            'top': '5px !important',
-                            'right': '10px !important',
-                            'left': 'auto !important',
-                        },
-                        labels: ["Date", "Connect", "TTFB", "Total"],
-                        strokeWidth: 1.0,
-                        // parses CSV file with unix timestamps in the first column
-                        xValueFormatter: Dygraph.dateString_,
-                        xValueParser: function(x) { return 1000*parseInt(x); },
-                        xTicker: Dygraph.dateTicker
-                      }
-                  );
+        var dataset_{{ info.url | md5sum }};
+        
+        function show_{{ info.url | md5sum }}() {            
+            if (!dataset_{{ info.url | md5sum }}) {
+        	     console.log('wait...');
+        	     setTimeout(show_{{ info.url | md5sum }}, 500);
+        	     return;
+            }
+            g_{{ info.url | md5sum }} = new Dygraph(
+                document.getElementById("g_{{ info.url | md5sum }}"),
+                dataset_{{ info.url | md5sum }}, {
+                    rollPeriod: 1,
+                    gridLineColor: '#ccc',
+                    visibility: [true, true, true],
+                    colors: ['#ff8c00', '#4682b4', '#9acd32', '#dc143c', '#9932cc'],
+                    width: 800,
+                    height: 200,
+//                     title: 'Response time (miliseconds)&emsp;',
+                    titleHeight: 20,
+                    axisLabelFontSize: 11,
+                    highlightCircleSize: 3,
+                    showRangeSelector: true,
+                    rangeSelectorHeight: 20,
+                    labelsKMG2: true,
+                    includeZero: true,
+                    logscale: false,
+                    hideOverlayOnMouseOut: true,
+                    labelsSeparateLines: '-',
+                    labelsDivStyles: {
+                        'backgroundColor': 'transparent',
+                        'text-align': 'right',
+                        'font-size': '11px',
+                        'top': '5px !important',
+                        'right': '10px !important',
+                        'left': 'auto !important',
+                    },
+                    labels: ["Date", "Connect", "TTFB", "Total"],
+                    ylabel: 'miliseconds',
+                    yLabelWidth: 13,
+                    strokeWidth: 1.0,
+                    // parses CSV file with unix timestamps in the first column
+                    xValueFormatter: Dygraph.dateString_,
+                    xValueParser: function(x) { return 1000*parseInt(x); },
+                    xTicker: Dygraph.dateTicker
+                  }
+              );
+       
+        }
+
+        
         </script>
 {% endfor %}
         
 <script>
 function change(el) {
-    {% for url in urls %}
-      g_{{ url | md5sum }}.setVisibility(parseInt(el.id), el.checked);
+    {% for info in urls %}
+      g_{{ info.url | md5sum }}.setVisibility(parseInt(el.id), el.checked);
     {% endfor %}
+};
+ 
+ jQuery.redirect = function(url, params) {
+
+     url = url || window.location.href || '';
+     url =  url.match(/\?/) ? url : url + '?';
+
+     for ( var key in params ) {
+         var re = RegExp( ';?' + key + '=?[^&;]*', 'g' );
+         url = url.replace( re, '');
+         url += '&' + key + '=' + params[key]; 
+     }  
+     // cleanup url 
+     url = url.replace(/[;&]$/, '');
+     url = url.replace(/\?[;&]/, '?'); 
+     url = url.replace(/[;&]{2}/g, '&');
+     // $(location).attr('href', url);
+     window.location.replace( url ); 
  };
  
-$(document).ready(function() {
+ function isNumber(n) {
+     return !isNaN(parseFloat(n)) && isFinite(n);
+   } 
+ 
+$(document).ready(function() {    
+    {% for info in urls %}
+      show_{{ info.url | md5sum }}();
+    {% endfor %}
     
-//     $('.group').live('click', function(e) {
-//        var id = $('a', this).attr('href');
-//        console.log(id);
-//        $(id).slideToggle();
-//     })
+    $("#offset").change(function() {
+	     var v = $(this).val();
+	     if (isNumber(v)) {
+		       $.redirect( location.href, { offset : v });
+	     } else {
+		      var id = '#' + v;
+		      $('#options').hide();
+		      $(id).show();
+		  
+	     }
+	     return false;
+    });
+    
+    $('#back').live('click', function() {
+       $('#options').show();
+       $('#datetime-selector').hide();
+	     return false;
+    })
 })
 </script>
+
+{% endblock %}
 </body>
 </html>

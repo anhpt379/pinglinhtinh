@@ -1,0 +1,109 @@
+{% extends 'home.html' %}
+
+{% block header %}
+    <div id='logo'><img src='/public/images/preferences.png' width=23 height=23></i>Preferences</div>
+
+     <div id='preferences'>
+        <a href='/'>&#171; Back to Home</a> | 
+        <a href='#' id='sign-out'>Sign out</a>
+     
+     </div>
+{% endblock %}
+
+{% block main %}
+  <form action='/preferences?action=add'>
+    <p>Add URL:</p>
+    <input type='text' name='url' placeholder='URL'/>
+    <input type='text' name='hostname' placeholder='Host name'/>
+    <input type='submit' value='Add' />
+  </form>
+  
+  <p style='margin-left: 40px;'>URLs:</p>
+  <ul id='urls'>
+    {% for info in urls %}
+    <li id="{{ info.url | md5sum }}">
+      {% if info.hostname %}
+      <a href='/#{{ info.url | md5sum }}'>{{ info.url }} ({{ info.hostname }})</a>
+      {% else %}
+      <a href='/#{{ info.url | md5sum }}'>{{ info.url }}</a>
+      {% endif %}
+      <a href='/preferences?action=remove&url={{ info.url }}' class='hidden remove'>Remove</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}
+
+
+{% block top_scripts %}{% endblock %}
+{% block scripts %}
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+<script>
+function createCookie(name,value,days) {
+    if (days) {
+            var date = new Date();
+            date.setTime(date.getTime()+(days*24*60*60*1000));
+            var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
+    }
+
+
+function eraseCookie(name) {
+    createCookie(name,"",-1);
+}
+
+$(document).ready(function() {
+    $('li').live('hover', function() {
+	     $('.remove', this).toggle();
+    });
+    
+    $('a#sign-out').live('click', function() {
+	     eraseCookie('passcode');
+	     window.location = '/preferences';
+	     return false;
+    });
+    
+    $('form').live('submit', function() {
+    	$.ajax({
+    	          type : "GET",
+    	          cache : false,
+    	          dataType : "json",
+    	          url : '/preferences?action=add',
+    	          data : $(this).serializeArray(),
+    	          success : function(resp) {
+    	              if (resp.hostname) {
+    	                    html = '<li id="' + resp.id + '">' + 
+                            '<a href="/#' + resp.id +'">' + resp.url + '(' + resp.hostname + ')' + '</a>' + 
+                            '<a href="/preferences?action=remove&url=' + resp.url + '" class="hidden remove">Remove</a>' +
+                            '</li>'
+    	              } else {
+    	                    html = '<li id="' + resp.id + '">' + 
+                            '<a href="/#' + resp.id +'">' + resp.url + '</a>' + 
+                            '<a href="/preferences?action=remove&url=' + resp.url + '" class="hidden remove">Remove</a>' +
+                            '</li>'
+    	              }
+    	              $('ul#urls').prepend(html);
+    	          }
+    	      });
+	    return false;
+    });
+    
+    $('.remove').live('click', function() {     
+      $.ajax({
+          type : "GET",
+          cache : false,
+          url : $(this).attr('href'),
+          success : function(id) {
+             $('ul#urls li#' + id).hide();
+          }
+      });
+      return false;
+    })
+    
+})
+</script>
+
+
+{% endblock %}

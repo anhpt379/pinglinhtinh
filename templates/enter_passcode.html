@@ -1,0 +1,51 @@
+{% extends 'home.html' %}
+
+{% block header %}
+    <div id='logo'><img src='/public/images/preferences.png' width=23 height=23></i>Preferences</div>
+
+     <div id='preferences'><a href='/'>&#171; Back to Home</a></div>
+{% endblock %}
+
+{% block main %}
+  <form action='/preferences?action=add'>
+    <p>Passcode:</p>
+    <input type='text' name='passcode' />
+    <input type='submit' value='Let me in' />
+  </form>
+{% endblock %}
+
+
+{% block top_scripts %}{% endblock %}
+{% block scripts %}
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+<script>
+
+function createCookie(name,value,days) {
+    if (days) {
+            var date = new Date();
+            date.setTime(date.getTime()+(days*24*60*60*1000));
+            var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
+    }
+
+
+
+$(document).ready(function() {
+
+    $('form').live('submit', function() {
+	    passcode = $('input[name="passcode"]').val();
+	    console.log(passcode);
+	    createCookie('passcode', passcode, 1);
+	  
+      window.location = '/preferences';
+      return false;
+    });
+
+    
+})
+</script>
+
+
+{% endblock %}
