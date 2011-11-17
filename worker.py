@@ -51,19 +51,23 @@ def check(url):
     else:
       break
   if hostname:
-    cmd = 'curl -o /dev/null -w "connect:%{time_connect}\tttfb:%{time_starttransfer}\ttotal:%{time_total} \n" -H "Host: ' + hostname + '" '  + url
+    cmd = 'curl -o /dev/null -w "code:%{http_code}\tsize:%{size_download}\tconnect:%{time_connect}\tttfb:%{time_starttransfer}\ttotal:%{time_total} \n" -H "Host: ' + hostname + '" '  + url
   else:
-    cmd = 'curl -o /dev/null -w "connect:%{time_connect}\tttfb:%{time_starttransfer}\ttotal:%{time_total} \n" ' + url
+    cmd = 'curl -o /dev/null -w "code:%{http_code}\tsize:%{size_download}\tconnect:%{time_connect}\tttfb:%{time_starttransfer}\ttotal:%{time_total} \n" ' + url
   LOG.debug(cmd)
   output = getoutput(cmd)
   data = output.split('\n')[-1].split()
   info = dict()
   for i in data:
     key, value = i.split(':')
-    info[key] = float(value)
+    if '.' in value:
+      info[key] = round(float(value), 4)
+    else:
+      info[key] = int(value)
   info['url'] = url
   info['timestamp'] = at
   LOG.debug('Saved: %s - %s' % (current_ts, url))
+  LOG.debug(info)
   api.save(info)
   return True
 

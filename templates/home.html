@@ -24,6 +24,7 @@
     </div>
     <div id='options'>
             <select id='offset'>
+              <option value='900' {% if offset == 900 %}selected{% endif %}>Last 15 minutes</option>
               <option value='7200' {% if offset == 7200 %}selected{% endif %}>Last 2 hours</option>
               <option value='86400' {% if offset == 86400 %}selected{% endif %}>Last day</option>
               <option value='604800' {% if offset == 604800 %}selected{% endif %}>Last week</option>
@@ -81,22 +82,38 @@
         <script type="text/javascript">
         var dataset_{{ info.url | md5sum }};
         
+        function update_{{ info.url | md5sum }}() {
+            $.ajax({
+                url: '/data.js?url={{ info.url }}&skip={{ skip }}+',
+                dataType: 'script',
+                success: function(new_data) {     
+                    var new_data = eval(new_data);
+                    
+                    dataset_{{ info.url | md5sum }} = dataset_{{ info.url | md5sum }}.concat(new_data);
+                                        
+                    g_{{ info.url | md5sum }}.updateOptions( { 'file': dataset_{{ info.url | md5sum }} } );
+                }
+            });
+        }
+        
         function show_{{ info.url | md5sum }}() {            
             if (!dataset_{{ info.url | md5sum }}) {
         	     console.log('wait...');
         	     setTimeout(show_{{ info.url | md5sum }}, 500);
         	     return;
             }
+            
+             setInterval("update_{{ info.url | md5sum }}()", 10000);
+
+            
             g_{{ info.url | md5sum }} = new Dygraph(
                 document.getElementById("g_{{ info.url | md5sum }}"),
                 dataset_{{ info.url | md5sum }}, {
-                    rollPeriod: 1,
                     gridLineColor: '#ccc',
                     visibility: [true, true, true],
                     colors: ['#ff8c00', '#4682b4', '#9acd32', '#dc143c', '#9932cc'],
                     width: 800,
                     height: 200,
-//                     title: 'Response time (miliseconds)&emsp;',
                     titleHeight: 20,
                     axisLabelFontSize: 11,
                     highlightCircleSize: 3,
@@ -119,10 +136,6 @@
                     ylabel: 'miliseconds',
                     yLabelWidth: 13,
                     strokeWidth: 1.0,
-                    // parses CSV file with unix timestamps in the first column
-                    xValueFormatter: Dygraph.dateString_,
-                    xValueParser: function(x) { return 1000*parseInt(x); },
-                    xTicker: Dygraph.dateTicker
                   }
               );
        

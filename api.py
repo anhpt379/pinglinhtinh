@@ -43,6 +43,8 @@ def fetch(url, start, end):
   if not records:
     while end % settings.step_size != 0:
       end -= 1
+    
+    while start % settings.step_size != 0:
       start -= 1
       
     mod = [settings.step_size, 0]
@@ -70,16 +72,17 @@ def fetch(url, start, end):
    
       
     records = list(records)
+    if not records:
+      return []
     
     # fix missing records
     timestamp_list = [record.get('timestamp') for record in records]   
-    
+        
     for ts in range(start, end, mod[0]):
       if ts not in timestamp_list:
         records.append({'timestamp': ts})
     
     records = sorted(records, key=lambda k: k['timestamp'])
-    print len(records)
     
     set_cache(key, records)
         
@@ -92,6 +95,16 @@ def get_urls():
     urls = [i['url'] for i in DATABASE['urls'].find()]
     set_cache(key, urls)
   return urls
+
+def get_info(url):
+  key = 'url:%s' % url
+  info = get_cache(key)
+  if not info:
+    info = DATABASE.urls.find_one({'url': url})
+    info = {'url': url,
+            'hostname': info.get('hostname')}
+    set_cache(key, info)
+  return info
 
 def get_keys():
   key = 'keys'
