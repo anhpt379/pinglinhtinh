@@ -24,7 +24,8 @@
     </div>
     <div id='options'>
             <select id='offset'>
-              <option value='900' {% if offset == 900 %}selected{% endif %}>Last 15 minutes</option>
+              <option value='120' {% if offset == 120 %}selected{% endif %}>Last 2 minutes</option>
+              <option value='1800' {% if offset == 1800 %}selected{% endif %}>Last 30 minutes</option>
               <option value='7200' {% if offset == 7200 %}selected{% endif %}>Last 2 hours</option>
               <option value='86400' {% if offset == 86400 %}selected{% endif %}>Last day</option>
               <option value='604800' {% if offset == 604800 %}selected{% endif %}>Last week</option>
@@ -90,8 +91,10 @@
                     var new_data = eval(new_data);
                     
                     dataset_{{ info.url | md5sum }} = dataset_{{ info.url | md5sum }}.concat(new_data);
-                                        
-                    g_{{ info.url | md5sum }}.updateOptions( { 'file': dataset_{{ info.url | md5sum }} } );
+                    
+                    setTimeout(function() {
+                      g_{{ info.url | md5sum }}.updateOptions( { 'file': dataset_{{ info.url | md5sum }} } );
+                    }, 5000)
                 }
             });
         }
@@ -99,25 +102,25 @@
         function show_{{ info.url | md5sum }}() {            
             if (!dataset_{{ info.url | md5sum }}) {
         	     console.log('wait...');
-        	     setTimeout(show_{{ info.url | md5sum }}, 500);
+        	     setTimeout(show_{{ info.url | md5sum }}, 1000);
         	     return;
             }
             
-             setInterval("update_{{ info.url | md5sum }}()", 10000);
+            setInterval("update_{{ info.url | md5sum }}()", 10000);
 
             
             g_{{ info.url | md5sum }} = new Dygraph(
                 document.getElementById("g_{{ info.url | md5sum }}"),
                 dataset_{{ info.url | md5sum }}, {
-                    gridLineColor: '#ccc',
+                    gridLineColor: '#e2e2e2',
                     visibility: [true, true, true],
-                    colors: ['#ff8c00', '#4682b4', '#9acd32', '#dc143c', '#9932cc'],
+                    colors: ['#9acd32', '#ff8c00', '#4682b4', '#dc143c', '#9932cc'],
                     width: 800,
-                    height: 200,
+                    height: 125,
                     titleHeight: 20,
                     axisLabelFontSize: 11,
-                    highlightCircleSize: 3,
-                    showRangeSelector: true,
+                    highlightCircleSize: 4,
+                    showRangeSelector: false,
                     rangeSelectorHeight: 20,
                     labelsKMG2: true,
                     includeZero: true,
@@ -135,7 +138,7 @@
                     labels: ["Date", "Connect", "TTFB", "Total"],
                     ylabel: 'miliseconds',
                     yLabelWidth: 13,
-                    strokeWidth: 1.0,
+                    strokeWidth: 2,
                   }
               );
        
@@ -146,6 +149,7 @@
 {% endfor %}
         
 <script>
+
 function change(el) {
     {% for info in urls %}
       g_{{ info.url | md5sum }}.setVisibility(parseInt(el.id), el.checked);

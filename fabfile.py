@@ -2,7 +2,10 @@ import fabric
 
 # Define sets of servers as roles
 fabric.api.env.roledefs = {
-  'production'   : ['192.168.6.206'],
+  'production'   : [
+                    '192.168.6.206',
+#                    '192.168.6.160'
+                ],
 }
 
 fabric.api.env.user = 'anhpt'

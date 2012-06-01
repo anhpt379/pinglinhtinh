@@ -11,7 +11,7 @@ from simplejson import dumps
 import api
 import settings
 
-app = Flask('Realtime-Monitoring')
+app = Flask(__name__)
 
 
 @app.template_filter('md5sum')
@@ -92,7 +92,7 @@ def dataset():
 
 @app.route('/')
 def main():
-  offset = request.args.get('offset', 15 * 60)
+  offset = request.args.get('offset', 30 * 60)
   offset = int(offset)
   url = request.args.get('url')
   domain = request.args.get('domain')
@@ -162,20 +162,14 @@ def preferences():
     urls.reverse()
     return render_template('preferences.html', urls=urls)
 
-import werkzeug.serving
-@werkzeug.serving.run_with_reloader
-def cherrypy_server():
-  app.debug = True
+
+if __name__ == '__main__':
   from cherrypy import wsgiserver
   server = wsgiserver.CherryPyWSGIServer(('0.0.0.0', 5000), app)
   try:
     server.start()
   except KeyboardInterrupt:
     server.stop()
-
-if __name__ == '__main__':
-#  app.run(debug=True, host='0.0.0.0')
-  cherrypy_server
   
   
   

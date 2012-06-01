@@ -15,14 +15,14 @@ formatter = logging.Formatter(
 console_logger = logging.StreamHandler()
 console_logger.setLevel(logging.DEBUG)
 console_logger.setFormatter(formatter)
-logging.getLogger('').addHandler(console_logger)
+logging.getLogger(__name__).addHandler(console_logger)
 
 file_logger = logging.FileHandler(filename='errors.log')
 file_logger.setLevel(logging.ERROR)
 file_logger.setFormatter(formatter)
-logging.getLogger('').addHandler(file_logger)
+logging.getLogger(__name__).addHandler(file_logger)
 
-LOG = logging.getLogger('MFS')
+LOG = logging.getLogger(__name__)
 LOG.setLevel(logging.DEBUG)
 
 

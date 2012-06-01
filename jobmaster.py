@@ -23,6 +23,7 @@ if __name__ == '__main__':
         
         ts += settings.step_size
         worker.LOG.debug('Sent to queue: %s - %s' % (ts, url))
+        print '[%s] %s' % (ts, url)
         if hostname:
           worker.QUEUE.put('%s|%s|%s' % (ts, url, hostname))
         else:

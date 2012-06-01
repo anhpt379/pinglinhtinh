@@ -30,10 +30,20 @@ function getXLabels() {
   return ary;
 }
 
+function makeNumbers(ary) {
+  var ret = [];
+  for (var i = 0; i < ary.length; i++) {
+    ret.push(parseFloat(ary[i]));
+  }
+  return ret;
+}
+
 function getLegend() {
   var legend = document.getElementsByClassName("dygraph-legend")[0];
   return legend.textContent;
 }
+
+AxisLabelsTestCase.prototype.kCloseFloat = 1.0e-10;
 
 AxisLabelsTestCase.prototype.testMinusOneToOne = function() {
   var opts = {
@@ -74,6 +84,7 @@ AxisLabelsTestCase.prototype.testMinusOneToOne = function() {
 
 AxisLabelsTestCase.prototype.testSmallRangeNearZero = function() {
   var opts = {
+    drawAxesAtZero: true,
     width: 480,
     height: 320
   };
@@ -87,16 +98,18 @@ AxisLabelsTestCase.prototype.testSmallRangeNearZero = function() {
 
   var graph = document.getElementById("graph");
   var g = new Dygraph(graph, data, opts);
-  assertEquals(["-0.1","-0.08","-0.06","-0.04","-0.02","0","0.02","0.04","0.06","0.08"], getYLabels());
+  assertEqualsDelta(makeNumbers(["-0.1","-0.08","-0.06","-0.04","-0.02","0","0.02","0.04","0.06","0.08"]),
+                    makeNumbers(getYLabels()), this.kCloseFloat);
 
   opts.valueRange = [-0.05, 0.05];
   g.updateOptions(opts);
   // TODO(danvk): why '1.00e-2' and not '0.01'?
-  assertEquals(["-0.05","-0.04","-0.03","-0.02","-0.01","0","1.00e-2","0.02","0.03","0.04"], getYLabels());
+  assertEquals(makeNumbers(["-0.05","-0.04","-0.03","-0.02","-0.01","0","1.00e-2","0.02","0.03","0.04"]),
+               makeNumbers(getYLabels()));
 
   opts.valueRange = [-0.01, 0.01];
   g.updateOptions(opts);
-  assertEquals(["-0.01","-8.00e-3","-6.00e-3","-4.00e-3","-2.00e-3","0","2.00e-3","4.00e-3","6.00e-3","8.00e-3"], getYLabels());
+  assertEquals(makeNumbers(["-0.01","-8.00e-3","-6.00e-3","-4.00e-3","-2.00e-3","0","2.00e-3","4.00e-3","6.00e-3","8.00e-3"]), makeNumbers(getYLabels()));
 
   g.setSelection(1);
   assertEquals('1: Y:0', getLegend());
@@ -407,4 +420,31 @@ AxisLabelsTestCase.prototype.testGlobalFormatters = function() {
 
   g.setSelection(9);
   assertEquals("vf9: y:vf18", getLegend());
+};
+
+AxisLabelsTestCase.prototype.testSeriesOrder = function() {
+  var opts = {
+    width: 480,
+    height: 320
+  };
+  var data = "x,00,01,10,11\n" +
+      "0,101,201,301,401\n" +
+      "1,102,202,302,402\n" +
+      "2,103,203,303,403\n" +
+      "3,104,204,304,404\n"
+  ;
+
+  var graph = document.getElementById("graph");
+  var g = new Dygraph(graph, data, opts);
+
+  g.setSelection(2);
+  assertEquals('2: 00:103 01:203 10:303 11:403', getLegend());
+
+  // Sanity checks for indexFromSetName
+  assertEquals(0, g.indexFromSetName("x"));
+  assertEquals(1, g.indexFromSetName("00"));
+  assertEquals(null, g.indexFromSetName("abcde"));
+
+  // Verify that we get the label list back in the right order
+  assertEquals(["x", "00", "01", "10", "11"], g.getLabels());
 };
